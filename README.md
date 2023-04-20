@@ -24,3 +24,12 @@
 
 # Description
 JS Analyser helps to identify vulnerabilities that could be exploited by attackers to gain unauthorized access to sensitive information or compromise the security of the web application. By detecting these vulnerabilities, web developers can take appropriate measures to patch them and improve the overall security posture of the application.
+
+## Installation
+Run the following commands sequentially 
+1. ```git clone https://github.com/Shirshakhtml/JSAnalyser```
+2. ```pip3 install -r requirements.txt```
+3. ```sudo apt update && sudo apt upgrade -y```
+4. ```sudo apt install golang```
+5. ```bash install.sh```
+6. ``` sudo cp $HOME/go/bin /usr/bin```
