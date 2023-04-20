@@ -33,3 +33,11 @@ Run the following commands sequentially
 4. ```sudo apt install golang```
 5. ```bash install.sh```
 6. ```sudo cp $HOME/go/bin /usr/bin```
+
+## Usage 
+```
+python3 js-finder.py 
+```  
+```
+python3 js-analyser.py
+```
