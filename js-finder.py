@@ -4,8 +4,19 @@ import requests
 from bs4 import BeautifulSoup
 from termcolor import colored
 import time
+import sys
 
-target_domain = input("Enter target domain: ")
+if len(sys.argv) > 1:
+    print("Please do not provide any arguments after the script name. Usage: python3 js-finder.py")
+    sys.exit()
+else:
+    target_domain = input("Enter target domain: ")
+    if target_domain.endswith('.com'):
+        # Add your code here to perform the analysis on the target domain
+        print("Performing analysis on domain:", target_domain)
+    else:
+        print("Please enter a valid domain name. Example: domain.com")
+        sys.exit()
 time.sleep(2)
 print("\n")
 lolz1 = lambda x: colored(x, 'yellow', 'on_magenta',  attrs=['bold', 'reverse', 'blink', 'underline'])
