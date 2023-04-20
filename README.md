@@ -32,4 +32,4 @@ Run the following commands sequentially
 3. ```sudo apt update && sudo apt upgrade -y```
 4. ```sudo apt install golang```
 5. ```bash install.sh```
-6. ``` sudo cp $HOME/go/bin /usr/bin```
+6. ```sudo cp $HOME/go/bin /usr/bin```
