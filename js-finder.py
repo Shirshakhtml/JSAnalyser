@@ -60,7 +60,7 @@ with open(subdomains_file, 'r') as f:
     processed_subdomains = 0
     for subdomain in f:
         subdomain = subdomain.strip()
-        command = f"httpx -silent -mc 200,301,302,403 https://{subdomain}"
+        command = f"httpx -silent -mc 200,301,302,403 https://{subdomain} -t 100"
         response = subprocess.run(command, shell=True, stdout=subprocess.PIPE)
         if response.stdout:
             valid_subdomains.append(subdomain)
@@ -85,11 +85,11 @@ with open('results.txt', 'a') as f:
     total_valid_subdomains = len(valid_subdomains)
     processed_subdomains = 0
     for subdomain in valid_subdomains:
-        dirsearch_command = f"python3 {dirsearch_path} -u https://{subdomain} -w {wordlist_path}"
+        dirsearch_command = f"python3 {dirsearch_path} -u https://{subdomain} -w {wordlist_path}  -t 80"
         dirsearch_output = subprocess.check_output(dirsearch_command, shell=True)
         f.write(dirsearch_output.decode('utf-8'))
 
-        ffuf_command = f"{ffuf_path} -u https://{subdomain}/FUZZ -w {wordlist_path} -mc 200"
+        ffuf_command = f"{ffuf_path} -u https://{subdomain}/FUZZ -w {wordlist_path} -mc 200  -t 80"
         ffuf_output = subprocess.check_output(ffuf_command, shell=True)
         f.write(ffuf_output.decode('utf-8'))
 
