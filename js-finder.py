@@ -92,11 +92,12 @@ print("\n")
 dirsearch_path = "/home/kali/Desktop/github/dirsearch/dirsearch.py"
 ffuf_path = "ffuf"
 wordlist_path = "jsfuzz"
+wordlist_path2 = "/usr/share/seclists/Discovery/Web-Content/common.txt"
 with open('results.txt', 'a') as f:
     total_valid_subdomains = len(valid_subdomains)
     processed_subdomains = 0
     for subdomain in valid_subdomains:
-        dirsearch_command = f"python3 {dirsearch_path} -u https://{subdomain} -w {wordlist_path}  -t 80"
+        dirsearch_command = f"python3 {dirsearch_path} -u https://{subdomain} -w {wordlist_path},{wordlist_path2}  -t 90"
         dirsearch_output = subprocess.check_output(dirsearch_command, shell=True)
         f.write(dirsearch_output.decode('utf-8'))
 
