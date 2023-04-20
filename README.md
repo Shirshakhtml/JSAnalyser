@@ -1,2 +1,4 @@
 # JSAnalyser
-JS Analyser is a useful tool for web developers and security professionals, as it helps identify potential vulnerabilities and improve the security of web applications.
+JS Analyser is a tool designed to perform a comprehensive analysis of JavaScript files from a domain's subdomains and source files. It uses fuzzing and brute-forcing techniques to identify endpoints and subdomains that may not have been explicitly specified in the web application. The tool also searches for secrets and sensitive keys by looking for common patterns used by services such as Github, Stripe, Paypal, Square, Twilio, Mailgun, Facebook, AWS, Firebase, and others.
+
+JS Analyser helps to identify vulnerabilities that could be exploited by attackers to gain unauthorized access to sensitive information or compromise the security of the web application. By detecting these vulnerabilities, web developers can take appropriate measures to patch them and improve the overall security posture of the application.
